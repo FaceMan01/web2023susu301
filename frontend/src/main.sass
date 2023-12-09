@@ -1,0 +1,231 @@
+$font-color-main: #333
+$font-color-main: #333 
+$font-color-secondary: #000 
+$font-color-light: #888888 
+$font-color-link: #0000FF 
+$background-color-main: #f4f4f4 
+$background-color-card: #ffffff 
+$background-color-button: #fdd835 
+$background-color-button-hover: #fbc02d 
+$background-color-header: #fff 
+$background-color-step: white 
+$background-color-number-box: black 
+$border-color-footer: #CCCCCC 
+$link-hover-color: rgba(0, 123, 255, 0.1) 
+$box-shadow-light: rgba(0, 0, 0, 0.1) 
+$link-border-hover: gray 
+
+body 
+	font-family: 'Open Sans', sans-serif 
+	margin: 0 
+	padding: 0 
+	background-color: background-color-main
+	overflow-x: hidden 
+
+.container 
+	max-width: 1200px 
+	margin: 0 auto 
+	display: flex 
+	align-items: center 
+	padding: 20px 30px 
+	position: relative 
+
+.site-header 
+	background-color: $background-color-header
+	box-shadow: 0 2px 5px $box-shadow-light
+
+.logo 
+	max-height: 40px 
+	margin-right: 50px 
+
+.main-nav 
+	ul 
+		list-style: none 
+		margin: 0 
+		padding: 0 
+		display: flex 
+	li 
+		margin-right: 40px 
+	a 
+		text-decoration: none 
+		color: $font-color-main 
+		font-weight: 400 
+		padding: 10px 0 
+		position: relative 
+		transition: all 0.3s 
+		&::before 
+			content: "" 
+			position: absolute 
+			bottom: 0 
+			left: 0 
+			width: 100% 
+			height: 3px 
+			background-color: $link-border-hover
+			transform: scaleX(0) 
+			transition: transform 0.3s 
+		&:hover 
+			&::before 
+				transform: scaleX(1) 
+
+.login-btn 
+	position: absolute 
+	top: 50% 
+	right: 30px 
+	transform: translateY(-50%) 
+	a 
+		color: #007BFF 
+		background-color: transparent 
+		padding: 8px 20px 
+		border-radius: 20px 
+		text-decoration: none 
+		display: flex 
+		align-items: center 
+		transition: background-color 0.3s 
+		&::after 
+			content: url('assets/icons/login.svg') 
+			margin-right: 10px 
+			display: inline-block 
+		&:hover 
+			background-color: $link-hover-color 
+
+.content-section 
+	display: flex 
+	flex-direction: column 
+	align-items: center 
+	justify-content: center 
+	padding: 50px 0 
+
+.content-container 
+	display: flex 
+	flex-direction: column 
+	align-items: center 
+	text-align: center 
+	margin-bottom: 30px 
+
+h1, .course-suitability h2 
+	font-size: 2.5rem 
+	margin-bottom: 5px 
+	color: $font-color-main
+
+p 
+	font-size: 0.9rem 
+	margin-bottom: 30px 
+	color: $font-color-secondary
+
+.details-btn 
+	padding: 15px 40px 
+	font-size: 1rem 
+	color: $font-color-secondary
+	background-color: $background-color-button
+	border: none 
+	border-radius: 5px 
+	cursor: pointer 
+	transition: background-color 0.3s 
+	&:hover 
+		background-color: $background-color-button-hover 
+
+.image-container 
+	img 
+		display: block 
+		margin: auto 
+
+.course-suitability 
+	padding: 50px 0 
+	text-align: center 
+
+.content-wrapper 
+	display: flex 
+	justify-content: space-between 
+	align-items: center 
+	max-width: 1200px 
+	margin: 0 auto 
+
+.text-container 
+	flex-basis: 50% 
+	text-align: left 
+	ul 
+		list-style: none 
+		padding: 0 
+	li 
+		margin-bottom: 20px 
+		font-size: 0.9rem 
+		position: relative 
+		padding-left: 20px 
+		&::before 
+			content: "-" 
+			position: absolute 
+			left: 0 
+			top: 50% 
+			transform: translateY(-50%) 
+
+.card-group 
+	margin-top: 30px 
+	display: flex 
+	justify-content: center 
+	align-items: stretch 
+	gap: 50px 
+	flex-wrap: wrap 
+
+.card, .card-small 
+	background-color: $background-color-card 
+	border-radius: 8px 
+	box-shadow: 0 2px 10px $box-shadow-light
+	padding: 20px 
+	box-sizing: border-box 
+	transition: transform 0.3s ease 
+	text-align: left 
+
+.card 
+	width: calc(35% - 20px) 
+	&:hover 
+		transform: translateY(-5px) 
+
+.card-small 
+	width: calc(25% - 20px) 
+
+.how-to-join 
+	.steps-group 
+		margin-top: 30px 
+		display: flex 
+		gap: 50px 
+		justify-content: center 
+	.step 
+		background-color: $background-color-step 
+		padding: 15px 
+		border-radius: 15px 
+		box-shadow: 0 0 10px $box-shadow-light 
+		width: calc(15% - 10px) 
+		text-align: center 
+		box-sizing: border-box 
+	.number-box 
+		background-color: $background-color-number-box 
+		color: white 
+		width: 40px 
+		height: 40px 
+		display: flex 
+		justify-content: center 
+		align-items: center 
+		margin: 0 auto 10px auto 
+		border-radius: 50% 
+
+footer 
+	width: 100% 
+	padding: 20px 0 
+	a 
+		color: $font-color-link
+		text-decoration: none 
+		&:hover 
+			text-decoration: underline 
+
+.footer-content 
+	max-width: 1200px 
+	margin: 0 auto 
+	display: flex 
+	justify-content: space-between 
+	padding: 10px 20px 
+	border-top: 1px solid $border-color-footer
+
+footer span, footer a 
+	margin-top: 15px 
+	font-size: 14px 
+	color: $font-color-light 
